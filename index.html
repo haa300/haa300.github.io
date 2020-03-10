@@ -169,135 +169,163 @@ function w3RemoveClass(element, name) {
 </head>
 <body>
 
-<h2 align="center">HAA300 - A New Benchmark for Human-Centric Atomic Action Recognition</h2>
+<h2 align="center">Cultivating HAA150: Human-Centric Atomic Action Dataset with Curated Video</h2>
 <p style="text-align:justify">
-  We propose a human-centric atomic action video dataset for fine-grained action recognition. Instead of the existing and emerging atomic action datasets emphasizing data size, our dataset advocates to human-centric actions with an average of 77% detectable joints for the relevant human poses. It contains 300 human atomic action classes with 6K action labels in total. Each clip (taken from Youtube) lasts no more than 3 seconds. The collected human actions cover a broad range of classes including human-only actions such as waving hand, human-object interactions such as playing hulaloop, as well as human-human interactions such as hugging. We describe the dataset statistics, collection methodology, and compare quantitative performance for baseline neural network architectures trained and tested on human action classification task using this dataset. We demonstrate fine-grained action recognition by evaluating the AVA dataset with models pretrained with our dataset, and transfer learning results on UCF101 and HMDB51 after fine-tuning our pretrained model.
-  <h5>Full Paper: <a target="_blank" href="haa300.pdf">HAA300</a></h5>
+WecontributeHAA150,amanuallyannotatedhuman-centric atomic action dataset for action recognition on 150 classes with over 240k labeled frames. Unlike existing atomic action datasets some of which were collected “in the wild,” HAA150 has been carefully curated to capture movement of human figures with less spatio-temporal noises to greatly enhance the training of deep neural networks. The advantages of HAA150 include: 1) human-centric actions with a high average of 75.1% detectable joints for the relevant human poses; 2) high sampling frequency which effectively ameliorates the adverse effect of temporal noises; 3) fine-grained atomic action classes. Our extensive experiments have validated that 018 with its clean and fine-grained nature, HAA150 significantly improves action recognition tasks even only adopting baseline architecture under different settings. We detail the HAA150 dataset statistics and collection methodology, and compare quantitatively with existing action recognition datasets.
+  <h5>Full Paper: <a target="_blank" href="haa150.pdf">HAA150</a></h5>
   </p>
 <div id="myBtnContainer">
-  <button class="btn  active" onclick="filterSelection('archery')"> Archery</button>
-    <button class="btn  " onclick="filterSelection('arm_wrestling')"> Arm Wrestling (hold, uneven)</button>
-    <button class="btn  " onclick="filterSelection('backflip')"> Backflip</button>
-  <button class="btn" onclick="filterSelection('badminton')"> Badminton</button>
-    <button class="btn  " onclick="filterSelection('balancebeam')"> Balance Beam</button>
-    <button class="btn  " onclick="filterSelection('baseball')"> Baseball</button>
-  <button class="btn" onclick="filterSelection('basketball')"> Basketball</button>
-    <button class="btn  " onclick="filterSelection('beachvolleyball')"> Beach Volleyball</button>
-    <button class="btn  " onclick="filterSelection('beer_pong')"> Beer Pong</button>
-  <button class="btn" onclick="filterSelection('billiard')"> Billiard</button>
-    <button class="btn  " onclick="filterSelection('bowling')"> Bowling</button>
-    <button class="btn  " onclick="filterSelection('bowls')"> Bowls</button>
-  <button class="btn" onclick="filterSelection('boxing')"> Boxing (defense, attack)</button>
-    <button class="btn  " onclick="filterSelection('breakdancing')"> Break Dancing</button>
-    <button class="btn  " onclick="filterSelection('breaking-board')"> Breaking-Board</button>
-  <button class="btn" onclick="filterSelection('bruth_teeth')"> Bruth Teeth</button>
-    <button class="btn  " onclick="filterSelection('bungee_jumping')"> Bungee Jumping</button>
-    <button class="btn  " onclick="filterSelection('calf_roping)"> Calf Roping</button>
-  <button class="btn" onclick="filterSelection('canoeing')"> Canoeing</button>
-    <button class="btn  " onclick="filterSelection('carry')"> Carry</button>
-    <button class="btn  " onclick="filterSelection('chopping-wood')"> Chopping-Wood</button>
-  <button class="btn" onclick="filterSelection('clapping')"> Clapping</button>
-    <button class="btn  " onclick="filterSelection('cleaning')"> Cleaning</button>
-    <button class="btn  " onclick="filterSelection('climb')"> Climb</button>
-  <button class="btn" onclick="filterSelection('circket')"> Circket</button>
-    <button class="btn  " onclick="filterSelection('croquet')"> Croquet</button>
-    <button class="btn  " onclick="filterSelection('curling')"> Curling</button>
-  <button class="btn" onclick="filterSelection('cycling')"> Cycling</button>
-    <button class="btn  " onclick="filterSelection('dart')"> Dart</button>
-    <button class="btn  " onclick="filterSelection('discuss')"> Discuss</button>
-  <button class="btn" onclick="filterSelection('dodgeball')"> Dogeball</button>
-    <button class="btn  " onclick="filterSelection('drinking_with')"> Drinking With</button>
-    <button class="btn  " onclick="filterSelection('eat')"> Eat</button>
-  <button class="btn" onclick="filterSelection('equestrian')"> Equestrian)</button>
-    <button class="btn  " onclick="filterSelection('elliptical')"> Elliptical</button>
-    <button class="btn  " onclick="filterSelection('faceplanting')"> Faceplanting</button>
-  <button class="btn" onclick="filterSelection('fencing')"> Fencing </button>
-    <button class="btn  " onclick="filterSelection('fishing')"> Fishing </button>
-    <button class="btn  " onclick="filterSelection('floor')"> Floor</button>
-  <button class="btn" onclick="filterSelection('folding')"> Folding</button>
-    <button class="btn  " onclick="filterSelection('football')"> Football</button>
-    <button class="btn  " onclick="filterSelection('frisbee')"> Frisbee</button>
-  <button class="btn" onclick="filterSelection('golf')"> Golf</button>
-      <button class="btn  " onclick="filterSelection('open')"> Open</button>
-    <button class="btn  " onclick="filterSelection('gym_workout_lift')"> Gym-workout Lift</button>
-    <button class="btn  " onclick="filterSelection('gym_workout')"> Gym-workout </button>
-  <button class="btn" onclick="filterSelection('hammer')"> Hammer Throw</button>
-    <button class="btn  " onclick="filterSelection('hand_in_hand')"> Hand in Hand </button>
-    <button class="btn  " onclick="filterSelection('handball')"> Handball</button>
-  <button class="btn" onclick="filterSelection('handshake')"> Handshake</button>
-   <button class="btn  " onclick="filterSelection('hopscotch')"> Hopscotch</button>
-  <button class="btn" onclick="filterSelection('highfive')"> Highfive</button>
-    <button class="btn  " onclick="filterSelection('high_jump')"> High Jump</button>
-    <button class="btn  " onclick="filterSelection('hanging')"> Hanging</button>
-  <button class="btn" onclick="filterSelection('horizontalbar')"> Horizontal Bar</button>
-    <button class="btn  " onclick="filterSelection('hug')"> Hug</button>
-    <button class="btn  " onclick="filterSelection('hurdle')"> Hurdle</button>
-  <button class="btn" onclick="filterSelection('ice-skating')"> Ice Skating</button>
-    <button class="btn  " onclick="filterSelection('ice-hockey')"> Ice Hockey</button>
-    <button class="btn  " onclick="filterSelection('ice')"> Ice Climbing</button>
-  <button class="btn" onclick="filterSelection('ironing)"> Ironing</button>
-    <button class="btn  " onclick="filterSelection('javelin')"> Javelin</button>
-    <button class="btn  " onclick="filterSelection('judo')"> Judo</button>
-  <button class="btn" onclick="filterSelection('jump-rope')"> Jump-Rope</button>
-    <button class="btn  " onclick="filterSelection('kento')"> Kendo</button>
-    <button class="btn  " onclick="filterSelection('korfball')"> Korfball</button>
-  <button class="btn" onclick="filterSelection('lacrosse')"> Lacrosse</button>
-   <button class="btn  " onclick="filterSelection('lift')"> Lift</button>
-  <button class="btn" onclick="filterSelection('long_jump')"> Long Jump</button>
-    <button class="btn  " onclick="filterSelection('luge')"> Luge</button>
 
-  <button class="btn" onclick="filterSelection('paintball')"> Paintball (run, shoot)</button>
-  <button class="btn" onclick="filterSelection('parallelbar')"> Parallel Bar (flip, jump, land, spin)</button>
-    <button class="btn" onclick="filterSelection('pickleball')"> Pickleball (backhand, forehand, serve)</button>
-  <button class="btn" onclick="filterSelection('play_instrument')"> Play Instrument (accordian, bassguitar, bassoon, benjo, cello, clarinet, cymbals, englishhorm, erhu, frenchhorn, gong, grandpiano, guitar, guzheng, harmonica, harp, harpsichord, jazzdrum, lute, mandolin, oboe, ophicleide, organ, sarrusophone, saxphone, serpent, timpani, traingle, trombone, trumpet, tuba, uprightpiano, viola, violin, xylophone)</button>
-    <button class="btn" onclick="filterSelection('play_hulaloop')"> Play Hulaloop</button>
-  <button class="btn" onclick="filterSelection('play_chess')"> Play Chess (pick, shift)</button>
-  <button class="btn" onclick="filterSelection('play_go')"> Play Go (pick, put)</button>
-    <button class="btn " onclick="filterSelection('pole_vault')"> Pole Vault (jump, run)</button>
-  <button class="btn" onclick="filterSelection('pommelhorse')"> Pommel Horse (cross, spin)</button>
-  <button class="btn" onclick="filterSelection('punching')"> Punch (sandbag, speedbag)</button>
+  <button class="btn  active" onclick="filterSelection('archery')"> Archery</button> 
+    <button class="btn  " onclick="filterSelection('arm_wave')"> Arm Wave</button>
+  <button class="btn" onclick="filterSelection('badminton_overswing')"> Badminton (Overswing)</button>
+    <button class="btn" onclick="filterSelection('badminton_serve')"> Badminton (Serve)</button>
+  <button class="btn" onclick="filterSelection('badminton_underswing')"> Badminton (Underswing)</button>
+    <button class="btn  " onclick="filterSelection('balancebeam_flip')"> Balance Beam (Flip)</button>
+    <button class="btn  " onclick="filterSelection('balancebeam_jump')"> Balance Beam (Jump)</button>
+    <button class="btn  " onclick="filterSelection('balancebeam_rotate')"> Balance Beam (Rotate)</button>
+    <button class="btn  " onclick="filterSelection('balancebeam_spin')"> Balance Beam (Spin)</button>
+    <button class="btn  " onclick="filterSelection('balancebeam_walk')"> Balance Beam (Walk)</button>
+    <button class="btn  " onclick="filterSelection('baseball_pitch')"> Baseball (Pitch) </button>
+        <button class="btn  " onclick="filterSelection('baseball_'run)"> Baseball (Run) </button>
+            <button class="btn  " onclick="filterSelection('baseball_swing')"> Baseball (Swing) </button>
+  <button class="btn" onclick="filterSelection('basketball_dribble')"> Basketball (Dribble) </button>
+  <button class="btn" onclick="filterSelection('basketball_dunk')"> Basketball (Dunk) </button>
+    <button class="btn" onclick="filterSelection('basketball_shoot')"> Basketball (Shoot) </button>
+    <button class="btn  " onclick="filterSelection('beer_pong_throw')"> Beer Pong (Throw) </button>
+      <button class="btn" onclick="filterSelection('bike_fall')"> Bike (Fall)</button>
+  <button class="btn" onclick="filterSelection('billiard_hit')"> Billiard (Hit)</button>
+    <button class="btn  " onclick="filterSelection('bowling')"> Bowling</button>
+    <button class="btn  " onclick="filterSelection('bowls_throw')"> Bowls (Throw)</button>
+    <button class="btn  " onclick="filterSelection('breakdancing_flare')"> Break Dancing (Flare)</button>
+    <button class="btn  " onclick="filterSelection('breakdancing_flip')"> Break Dancing (Flip)</button>
+        <button class="btn  " onclick="filterSelection('breakdancing_lift')"> Break Dancing (Lift)</button>
+            <button class="btn  " onclick="filterSelection('breakdancing_rotate')"> Break Dancing (Rotate)</button>
+    <button class="btn  " onclick="filterSelection('bungee_jumping_jump')"> Bungee Jumping (Jump)</button>
+        <button class="btn  " onclick="filterSelection('bungee_jumping_push')"> Bungee Jumping (Push)</button>
+  <button class="btn" onclick="filterSelection('canoeing_slalom')"> Canoeing (Slalom) </button>
+    <button class="btn" onclick="filterSelection('canoeing_sprint')"> Canoeing (Sprint) </button>
+    <button class="btn  " onclick="filterSelection('card_throw')"> Card (Throw) </button>
+    <button class="btn  " onclick="filterSelection('chopping_wood')"> Chopping (Wood)</button>
+        <button class="btn  " onclick="filterSelection('chopping_meat')"> Chopping (Meat)</button>
+    <button class="btn  " onclick="filterSelection('cleaning_mopping')"> Cleaning (Mopping) </button>
+        <button class="btn  " onclick="filterSelection('cleaning_sweeping')"> Cleaning (Sweeping) </button>
+            <button class="btn  " onclick="filterSelection('cleaning_vacumming')"> Cleaning (Vacumming) </button>
+                <button class="btn  " onclick="filterSelection('cleaning_window')"> Cleaning (Window) </button>
+    <button class="btn  " onclick="filterSelection('climb_rock')"> Climb (Rock)</button>
+        <button class="btn  " onclick="filterSelection('climb_tree')"> Climb (Tree)</button>
+    <button class="btn  " onclick="filterSelection('dart_throw')"> Dart (Throw)</button>
+    <button class="btn  " onclick="filterSelection('discuss_throw')"> Discuss (Throw)</button>
+  <button class="btn" onclick="filterSelection('dodgeball')"> Dogeball</button>
+    <button class="btn  " onclick="filterSelection('drinking_with_cup')"> Drinking With Cup</button>
+        <button class="btn  " onclick="filterSelection('drinking_with_straw')"> Drinking With Straw</button>
+    <button class="btn  " onclick="filterSelection('eat_apple')"> Eat (Apple)</button>
+     <button class="btn  " onclick="filterSelection('eat_burger')"> Eat (Burger)</button>
+      <button class="btn  " onclick="filterSelection('eat_hotdog')"> Eat (Hotdog)</button>
+       <button class="btn  " onclick="filterSelection('eat_icecream')"> Eat (Ice Cream)</button>
+    <button class="btn  " onclick="filterSelection('floor_spin')"> Floor (Spin)</button>
+        <button class="btn  " onclick="filterSelection('floor_rotate')"> Floor (Rotate)</button>
+  <button class="btn" onclick="filterSelection('folding_clothes')"> Folding (Clothes)</button>
+  <button class="btn" onclick="filterSelection('folding_blanket')"> Folding (Blanket)</button>
+    <button class="btn  " onclick="filterSelection('football_catch')"> Football (Catch)</button>
+    <button class="btn  " onclick="filterSelection('football_throw')"> Football (Throw) </button>
+        <button class="btn  " onclick="filterSelection('football_run')"> Football (Run)</button>
+    <button class="btn  " onclick="filterSelection('frisbee_throw')"> Frisbee (Throw) </button>
+        <button class="btn  " onclick="filterSelection('frisbee_catch)"> Frisbee (Catch) </button>
+  <button class="btn" onclick="filterSelection('golf_swing')"> Golf (Swing)</button>
+  <button class="btn" onclick="filterSelection('golf_part')"> Golf (Part)</button>
+    <button class="btn  " onclick="filterSelection('gym_lift')"> Gym (Lift)</button>
+        <button class="btn  " onclick="filterSelection('gym_pull')"> Gym (Pull)</button>
+            <button class="btn  " onclick="filterSelection('gym_push')"> Gym (Push)</button>
+                <button class="btn  " onclick="filterSelection('gym_ride')"> Gym (Ride)</button>
+                    <button class="btn  " onclick="filterSelection('gym_run')"> Gym (Run)</button>
+                      <button class="btn" onclick="filterSelection('hammer_throw')"> Hammer (Throw)</button>
+    <button class="btn  " onclick="filterSelection('hand_in_hand')"> Hand in Hand </button>
+      <button class="btn" onclick="filterSelection('handshake_dog')"> Handshake (Dog)</button>
+          <button class="btn  " onclick="filterSelection('high_jump_jump')"> High Jump (Jump)</button>
+         <button class="btn  " onclick="filterSelection('high_jump_run')"> High Jump (Run)</button>
+             <button class="btn  " onclick="filterSelection('hanging_clothes')"> Hanging Clothes</button> 
+                 <button class="btn  " onclick="filterSelection('hug')"> Hug</button>
+                   <button class="btn" onclick="filterSelection('horizontalbar_flip')"> Horizontal Bar (Flip)</button>
+               <button class="btn" onclick="filterSelection('horizontalbar_jump')"> Horizontal Bar (Jump)</button>
+        <button class="btn" onclick="filterSelection('horizontalbar_land')"> Horizontal Bar (Land)</button>
+  <button class="btn" onclick="filterSelection('horizontalbar_spin')"> Horizontal Bar (Spin)</button>
+  <button class="btn" onclick="filterSelection('ironing_clothes)"> Ironing (Clothes)</button>
+    <button class="btn  " onclick="filterSelection('javelin_run')"> Javelin (Run)</button>
+        <button class="btn  " onclick="filterSelection('javelin_throw')"> Javelin (Throw)</button>
+        <button class="btn  " onclick="filterSelection('juggling_balls )"> Juggling Balls</button>
+       <button class="btn  " onclick="filterSelection('open')"> Open (Door)</button>
+         <button class="btn" onclick="filterSelection('long_jump_jump')"> Long Jump (Jump)</button>
+         <button class="btn" onclick="filterSelection('long_jump_run')"> Long Jump (Run)</button>
+           <button class="btn" onclick="filterSelection('play_accordian')"> Play Accordian</button>
+           <button class="btn" onclick="filterSelection('play_cello')"> Play Cello</button>
+           <button class="btn" onclick="filterSelection('play_clarinet')"> Play Clarinet</button>
+           <button class="btn" onclick="filterSelection('play_erhu')"> Play Erhu</button>
+           <button class="btn" onclick="filterSelection('play_grandpiano')"> Play Grandpiano</button>
+           <button class="btn" onclick="filterSelection('play_guitar')"> Play Guitar</button>
+           <button class="btn" onclick="filterSelection('play_harp')"> Play Harp</button>
+           <button class="btn" onclick="filterSelection('play_hulaloop')"> Play Hulaloop</button>
+           <button class="btn" onclick="filterSelection('play_jazzdrum')"> Play Jazzdrum</button>
+          <button class="btn" onclick="filterSelection('play_saxophone')"> Play Saxophone</button>
+           <button class="btn" onclick="filterSelection('play_timpani')"> Play Timpani</button>
+           <button class="btn" onclick="filterSelection('play_triangle')"> Play Triangle</button>
+           <button class="btn" onclick="filterSelection('play_trombone')"> Play Trombone</button>
+           <button class="btn" onclick="filterSelection('play_trumpet')"> Play Trumpet</button>
+           <button class="btn" onclick="filterSelection('play_viola')"> Play Viola</button>
+               <button class="btn" onclick="filterSelection('play_violin')"> Play Violin</button>
+           <button class="btn" onclick="filterSelection('play_cymbals')"> Play Cymbals</button>
+           <button class="btn" onclick="filterSelection('play_recorder')"> Play Recorder</button>
+    <button class="btn " onclick="filterSelection('pole_vault_jump')"> Pole Vault (Jump)</button>
+        <button class="btn " onclick="filterSelection('pole_vault_run')"> Pole Vault (Run)</button>
+  <button class="btn" onclick="filterSelection('punching_sandbag')"> Punch (Sandbag)</button>
+   <button class="btn" onclick="filterSelection('punching_speedbag')"> Punch (Speedbag)</button>
   <button class="btn" onclick="filterSelection('pushup')"> Pushup</button>
     <button class="btn" onclick="filterSelection('push')"> Push (car, cart, wheelchair)</button>
-  <button class="btn" onclick="filterSelection('putdown_box')"> Putdown Box </button>
   <button class="btn" onclick="filterSelection('reading')"> Read (book, newspaper) </button>
    <button class="btn" onclick="filterSelection('racewalk_walk ')"> Racewalk Walk </button>
-  <button class="btn" onclick="filterSelection('ring')"> Ring (hangdown, hanghorizontal, hangup, land)</button>
-    <button class="btn" onclick="filterSelection('rock_climbing')"> Rock Climbimg (indoor, outdoor)</button>
-  <button class="btn" onclick="filterSelection('roller_skating')"> Roller Skating (forward, backward)</button>
+     <button class="btn" onclick="filterSelection('roller_skating_forward')"> Roller Skating (Forward)</button>
+  <button class="btn" onclick="filterSelection('roller_skating_backward')"> Roller Skating (Backward)</button>
   <button class="btn" onclick="filterSelection('rowing')"> Rowing </button>
-  <button class="btn" onclick="filterSelection('rugby')"> Rugby (run, rush, throw)</button>
-  <button class="btn" onclick="filterSelection('sailboat')"> Sailboat </button>
-  <button class="btn" onclick="filterSelection('sepak_takraw')"> Sepak-Takraw (kick, shoot)</button>
-
-    <button class="btn " onclick="filterSelection('shooting')"> Shooting (pistol, skeet)</button>
+  <button class="btn" onclick="filterSelection('riding_bike')"> Riding (Bike)</button>
+    <button class="btn" onclick="filterSelection('riding_horse')"> Riding (Horse)</button>
+      <button class="btn" onclick="filterSelection('riding_motorcycle')"> Riding (Motorcycle)</button>
+        <button class="btn" onclick="filterSelection('riding_scooter')"> Riding (Scooter)</button>
   <button class="btn" onclick="filterSelection('shot_put_throw')"> Shot Put Throw</button>
-  <button class="btn" onclick="filterSelection('singing_microphone')"> Singing Microphone </button>
   <button class="btn" onclick="filterSelection('situp')"> Situp</button>
- <button class="btn" onclick="filterSelection('skateboard')"> Skateboard (forward, jump)</button>
-  <button class="btn" onclick="filterSelection('skeleton')"> Skeleton </button>
-    <button class="btn" onclick="filterSelection('smoke')"> Smoke (blow, down, hold, up) </button>
-  <button class="btn" onclick="filterSelection('snowboard')"> Snowboard (jump, slide, spin)</button>
+ <button class="btn" onclick="filterSelection('skateboard_forward')"> Skateboard (Forward)</button>
+  <button class="btn" onclick="filterSelection('skateboard_jump')"> Skateboard (Jump)</button>
   <button class="btn" onclick="filterSelection('soccer)"> Soccer (dribble, shoot)</button>
-  <button class="btn" onclick="filterSelection('softball')"> Softball (hit, pitch, throw)</button>
-    <button class="btn " onclick="filterSelection('speedskating ')"> Speedskating </button>
-  <button class="btn" onclick="filterSelection('squash')"> Squash (backhand, forehand)</button>
-  <button class="btn" onclick="filterSelection('sumo')"> Sumo (defeat, even, set)</button>
-  <button class="btn" onclick="filterSelection('tabletennis')"> Tabletennis (backhand, forehand, serve)</button>
- <button class="btn" onclick="filterSelection('taekwondo')"> Taekwondo (strike, kick)</button>
-  <button class="btn" onclick="filterSelection('tennis')"> Tennis ( swing backhand, swing forehand, volley backhand, volley forehand, serve)</button>
-    <button class="btn" onclick="filterSelection('trampoline')"> Trampoline (spin, jump)</button>
-  <button class="btn" onclick="filterSelection('triple_jump')"> Triple Jump (spin, jump)</button>
-  <button class="btn" onclick="filterSelection('unevenbar')"> Unevenbar (cross, flip, jump, land, spin)</button>
+  <button class="btn" onclick="filterSelection('surfing')"> Surfing</button>
+  <button class="btn" onclick="filterSelection('swimming_backstroke')"> Swimming (Backstroke)</button>
+  <button class="btn" onclick="filterSelection('swimming_breaststroke')"> Swimming (Breaststroke)</button>
+    <button class="btn" onclick="filterSelection('swimming_Butterflystroke')"> Swimming (Butterflystroke)</button>
+ <button class="btn" onclick="filterSelection('taking_photo_camera')"> Taking Photo (Camera)</button>
+ <button class="btn" onclick="filterSelection('taking_photo_selfie')"> Taking Photo (Selfie)</button>
+  <button class="btn" onclick="filterSelection('taking_on_phone')"> Taking on Phone</button>
+   <button class="btn" onclick="filterSelection('typing_phone')"> Typing Phone</button>
+ <button class="btn" onclick="filterSelection('taking_photo_selfie')"> Taking Photo (Selfie)</button>
+ <button class="btn" onclick="filterSelection('taking_photo_selfie')"> Taking Photo (Selfie)</button>
+ <button class="btn" onclick="filterSelection('taekwondo')"> Taekwondo (Kick)</button>
+  <button class="btn" onclick="filterSelection('tennis_backhand')"> Tennis (Swing Backhand)</button>
+  <button class="btn" onclick="filterSelection('tennis_forehand')"> Tennis (Swing Forehand)</button>
+    <button class="btn" onclick="filterSelection('tennis_serve')"> Tennis (Serve)</button>
+  <button class="btn" onclick="filterSelection('triple_jump_jump')"> Triple Jump (Jump)</button>
+    <button class="btn" onclick="filterSelection('triple_jump_run')"> Triple Jump (Run)</button> 
+  <button class="btn" onclick="filterSelection('unevenbar_cross')"> Unevenbar (Cross)</button>
+    <button class="btn" onclick="filterSelection('unevenbar_flip')"> Unevenbar (Flip)</button>
+      <button class="btn" onclick="filterSelection('unevenbar_jump')"> Unevenbar (Jump)</button>
+        <button class="btn" onclick="filterSelection('unevenbar_land')"> Unevenbar (Land)</button>
+          <button class="btn" onclick="filterSelection('unevenbar_spin')"> Unevenbar (Spin)</button>
+  <button class="btn" onclick="filterSelection('unevenbar_cross')"> Unevenbar (cross, flip, jump, land, spin)</button>
   <button class="btn" onclick="filterSelection('unicycle_ride ')"> Unicycle Ride </button>
+
     <button class="btn" onclick="filterSelection('using_phone ')"> Using Phone (talking, typing) </button>
-   <button class="btn" onclick="filterSelection('vault')"> Vault (jump, land, spin)</button>
-   <button class="btn" onclick="filterSelection('volleyball')"> Volleyball (spike, set, serve, lowpass)</button>
-    <button class="btn" onclick="filterSelection('wave_hand')"> Wave Hand</button>
+
      <button class="btn" onclick="filterSelection('watering')"> Watering Plant</button>
       <button class="btn" onclick="filterSelection('washing')"> Washing (clothes, dishes)</button>
    <button class="btn" onclick="filterSelection('wall')"> Wall (brush, paint)</button>
    <button class="btn" onclick="filterSelection('weightlifting')"> Weightlifting (hang, overhead, stand)</button>
-  <button class="btn" onclick="filterSelection('yoga')"> Yoga ( bridge, plank, tree, triangle)</button>
+
   
 
 </div>
